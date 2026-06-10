@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 
 const Navbar = ({ openModal = () => {}, darkMode = false, toggleDark = () => {} }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <nav className="nav">
-      <div className="logo">Usta<span>Connect</span></div>
-      <ul className="nav-links">
-        <li><a href="#how">Qanday ishlaydi</a></li>
-        <li><a href="#categories">Kategoriyalar</a></li>
-        <li><a href="#masters">Ustalar</a></li>
-        <li><button className="nav-cta" onClick={openModal}>Ro'yxatdan o'tish</button></li>
+      <div className="logo">Fix<span>Hub</span></div>
+
+      <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
+        <li><a href="#how" onClick={() => setMenuOpen(false)}>Qanday ishlaydi</a></li>
+        <li><a href="#categories" onClick={() => setMenuOpen(false)}>Kategoriyalar</a></li>
+        <li><a href="#masters" onClick={() => setMenuOpen(false)}>Ustalar</a></li>
+        <li>
+          <button className="nav-cta" onClick={() => { openModal(); setMenuOpen(false) }}>
+            Ro'yxatdan o'tish
+          </button>
+        </li>
         <li>
           <button className="theme-toggle" onClick={toggleDark} aria-label="Toggle theme">
-            {darkMode ? '🌙' : '🌞'}
+            {darkMode ? '☀️' : '🌙'}
           </button>
         </li>
       </ul>
+
+      <button
+        className={`hamburger${menuOpen ? ' active' : ''}`}
+        onClick={() => setMenuOpen(o => !o)}
+        aria-label="Menu"
+      >
+        <span /><span /><span />
+      </button>
     </nav>
   )
 }

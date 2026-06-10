@@ -10,6 +10,12 @@ h1 em { font-style: normal; color: var(--accent); }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,93,47,0.45); }
 .btn-secondary { background: transparent; color: var(--ink); padding: 16px 32px; border-radius: 100px; font-family: 'Onest', sans-serif; font-size: 15px; font-weight: 600; border: 2px solid var(--ink); cursor: pointer; transition: background var(--transition-fast), color var(--transition-fast); }
 .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+.search-wrap { display: flex; align-items: center; gap: 0; margin-top: 28px; max-width: 480px; background: var(--card-bg); border: 1.5px solid var(--border); border-radius: 100px; overflow: hidden; box-shadow: var(--card-shadow); transition: border-color var(--transition-fast); }
+.search-wrap:focus-within { border-color: var(--accent); }
+.search-input { flex: 1; padding: 14px 20px; font-family: 'Onest', sans-serif; font-size: 14px; border: none; outline: none; background: transparent; color: var(--ink); }
+.search-input::placeholder { color: var(--muted); opacity: 0.7; }
+.search-btn { padding: 10px 20px; margin: 4px; background: var(--accent); color: var(--on-accent); border: none; border-radius: 100px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: box-shadow var(--transition-fast); }
+.search-btn:hover { box-shadow: 0 4px 16px rgba(232,93,47,0.4); }
 .hero-stats { display: flex; gap: 36px; margin-top: 48px; }
 .stat-item { text-align: left; }
 .stat-num { font-family: 'Unbounded', sans-serif; font-size: 28px; font-weight: 800; color: var(--ink); }

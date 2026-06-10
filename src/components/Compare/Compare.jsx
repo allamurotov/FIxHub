@@ -13,12 +13,12 @@ const Compare = () => {
   return (
     <section className="compare" id="compare">
       <div className="section-label">Taqqoslash</div>
-      <div className="section-title">Nima uchun UstaConnect?</div>
+      <div className="section-title">Nima uchun FixHub?</div>
       <div className="compare-table">
         <div className="compare-row header">
           <div className="compare-cell"></div>
           <div className="compare-cell">An'anaviy usta</div>
-          <div className="compare-cell highlight">UstaConnect</div>
+          <div className="compare-cell highlight">FixHub</div>
         </div>
         {rows.map((r, idx) => (
           <div className="compare-row" key={idx}>

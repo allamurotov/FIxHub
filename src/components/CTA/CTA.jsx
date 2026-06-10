@@ -15,3 +15,4 @@ const CTA = ({ openModal = () => {} }) => {
 }
 
 export default CTA
+
