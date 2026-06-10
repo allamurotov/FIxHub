@@ -1,0 +1,13 @@
+.compare { padding: 80px 48px; background: var(--paper); }
+.compare-table { margin-top: 48px; border: 1.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; max-width: 700px; box-shadow: var(--card-shadow); }
+.compare-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1.5px solid var(--border); }
+.compare-row:last-child { border-bottom: none; }
+.compare-cell { padding: 18px 24px; font-size: 14px; border-right: 1.5px solid var(--border); display: flex; align-items: center; gap: 8px; }
+.compare-cell:last-child { border-right: none; }
+.compare-row.header .compare-cell { font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700; background: var(--ink); color: var(--on-dark); letter-spacing: 0.5px; }
+.compare-row.header .compare-cell.highlight { background: var(--accent); }
+.check { color: #2eb87a; font-size: 16px; }
+.cross { color: #e85d2f; font-size: 16px; }
+.compare-cell.highlight { background: rgba(232,93,47,0.04); font-weight: 600; }
+
+@media (max-width: 900px) { .compare { padding: 60px 24px; } }
