@@ -1,8 +1,10 @@
-footer { background: var(--footer-bg); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-radius: var(--radius-md); }
-footer .logo { color: var(--footer-text); font-size: 18px; }
+footer { background: var(--footer-bg); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid transparent; }
+html.dark footer { border-top-color: var(--border); }
+footer .logo { color: var(--footer-text); font-size: 18px; font-family: 'Unbounded', sans-serif; font-weight: 800; }
+footer .logo span { color: var(--accent); }
 .footer-links { display: flex; gap: 24px; }
-.footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; transition: color var(--transition-fast); }
+.footer-links a { color: var(--footer-link); text-decoration: none; font-size: 13px; transition: color var(--transition-fast); }
 .footer-links a:hover { color: var(--footer-text); }
-.footer-copy { color: rgba(255,255,255,0.6); font-size: 12px; }
+.footer-copy { color: var(--footer-copy); font-size: 12px; }
 
 @media (max-width: 900px) { footer { padding: 32px 24px; flex-direction: column; text-align: center; } }

@@ -5,8 +5,8 @@
 .step-card { background: var(--card-bg); padding: 36px 28px; position: relative; transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease; border-radius: var(--radius-lg); box-shadow: var(--card-shadow); }
 .step-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(15,15,15,0.08); }
 .step-card:hover .step-num { color: var(--accent); }
-.step-card:hover .step-desc { color: rgba(255,255,255,0.75); }
-.step-num { font-family: 'Unbounded', sans-serif; font-size: 48px; font-weight: 800; color: rgba(13,13,13,0.12); line-height: 1; margin-bottom: 20px; transition: color var(--transition-medium) ease; }
+.step-card:hover .step-desc { color: var(--accent); }
+.step-num { font-family: 'Unbounded', sans-serif; font-size: 48px; font-weight: 800; color: var(--step-num-color); line-height: 1; margin-bottom: 20px; transition: color var(--transition-medium) ease; }
 .step-icon { font-size: 32px; margin-bottom: 16px; }
 .step-title { font-weight: 700; font-size: 16px; margin-bottom: 10px; }
 .step-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; transition: color var(--transition-medium) ease; }

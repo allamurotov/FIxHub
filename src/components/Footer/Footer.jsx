@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <footer>
-      <div className="logo" style={{color:'white'}}>Fix<span style={{color:'var(--accent)'}}>Hub</span></div>
+      <div className="logo">Fix<span>Hub</span></div>
       <div className="footer-links">
         <a href="#">Ustalar uchun</a>
         <a href="#">Mijozlar uchun</a>

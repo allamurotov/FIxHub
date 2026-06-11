@@ -4,7 +4,7 @@
 .compare-row:last-child { border-bottom: none; }
 .compare-cell { padding: 18px 24px; font-size: 14px; border-right: 1.5px solid var(--border); display: flex; align-items: center; gap: 8px; }
 .compare-cell:last-child { border-right: none; }
-.compare-row.header .compare-cell { font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700; background: var(--ink); color: var(--on-dark); letter-spacing: 0.5px; }
+.compare-row.header .compare-cell { font-family: 'Unbounded', sans-serif; font-size: 12px; font-weight: 700; background: var(--surface-dark); color: var(--on-dark); letter-spacing: 0.5px; }
 .compare-row.header .compare-cell.highlight { background: var(--accent); }
 .check { color: #2eb87a; font-size: 16px; }
 .cross { color: #e85d2f; font-size: 16px; }

@@ -1,5 +1,6 @@
 :root {
   --ink: #0d0d0d;
+  --surface-dark: #0d0d0d;
   --paper: #f5f0e8;
   --warm: #f5f0e8;
   --accent: #e85d2f;
@@ -15,14 +16,25 @@
   --card-shadow: 0 12px 36px rgba(15,15,15,0.06);
   --transition-fast: 180ms;
   --transition-medium: 320ms;
-  --footer-bg: #080808;
+  --footer-bg: var(--surface-dark);
   --footer-text: rgba(255,255,255,0.85);
-  --categories-title: white;
+  --footer-link: rgba(255,255,255,0.7);
+  --footer-copy: rgba(255,255,255,0.6);
+  --categories-title: #ffffff;
+  --categories-count: rgba(255,255,255,0.65);
+  --cat-card-bg: rgba(255,255,255,0.04);
+  --cat-card-border: rgba(255,255,255,0.06);
+  --cta-bg: var(--surface-dark);
+  --cta-title: var(--on-dark);
+  --cta-sub: rgba(255,255,255,0.55);
+  --cta-btn-border: rgba(255,255,255,0.3);
   --on-accent: #ffffff;
   --on-dark: #ffffff;
   --on-card-text: var(--ink);
   --chip-bg: #ffffff;
-  --categories-bg: var(--ink);
+  --categories-bg: var(--surface-dark);
+  --step-num-color: rgba(13,13,13,0.12);
+  --tag-bg: rgba(13,13,13,0.06);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,17 +50,30 @@ body {
 html.dark {
   --paper: #070707;
   --ink: #f6f6f6;
+  --surface-dark: #0d0d0d;
   --card-bg: #0f1720;
   --muted: #cfc9c3;
   --border: rgba(255,255,255,0.06);
-  --footer-bg: #050505;
-  --footer-text: rgba(255,255,255,0.9);
-  --categories-title: white;
+  --footer-bg: var(--paper);
+  --footer-text: var(--ink);
+  --footer-link: var(--muted);
+  --footer-copy: var(--muted);
+  --categories-title: var(--ink);
+  --categories-count: var(--muted);
+  --cat-card-bg: var(--card-bg);
+  --cat-card-border: var(--border);
+  --cta-bg: var(--paper);
+  --cta-title: var(--ink);
+  --cta-sub: var(--muted);
+  --cta-btn-border: var(--border);
   --on-accent: #ffffff;
   --on-dark: #ffffff;
   --on-card-text: #f6f6f6;
   --chip-bg: var(--card-bg);
-  --categories-bg: var(--card-bg);
+  --categories-bg: var(--paper);
+  --step-num-color: rgba(255,255,255,0.08);
+  --tag-bg: rgba(255,255,255,0.06);
+  --card-shadow: 0 12px 36px rgba(0,0,0,0.35);
 }
 
 /* small helper animations used by components */
