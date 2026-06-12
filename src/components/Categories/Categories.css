@@ -14,7 +14,7 @@
 }
 
 .skeleton-card { pointer-events: none; }
-.skeleton { background: #e0e0e0; border-radius: 8px; animation: skeletonPulse 1.2s ease-in-out infinite; }
+.skeleton { background: var(--border); border-radius: 8px; animation: skeletonPulse 1.2s ease-in-out infinite; }
 .skeleton-circle { width: 36px; height: 36px; border-radius: 50%; margin: 0 auto 12px; }
 .skeleton-text { height: 14px; margin: 0 auto 8px; }
 .skeleton-text-short { width: 60%; }

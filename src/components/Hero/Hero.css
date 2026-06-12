@@ -47,7 +47,9 @@ h1 em { font-style: normal; color: var(--accent); }
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
-  .hero-visual { display: block; }
-  .video-card { aspect-ratio: auto; height: 200px; }
+  .hero-visual { display: block; margin-top: 40px; }
+  .video-card { aspect-ratio: auto; height: 180px; }
   .floating-chip { display: none; }
+  .hero-stats { gap: 20px; flex-wrap: wrap; }
+  .stat-num { font-size: 22px; }
 }
