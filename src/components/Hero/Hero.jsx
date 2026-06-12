@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import './Hero.css'
 
 const Hero = ({ openModal = () => {} }) => {
   const [seconds, setSeconds] = useState(262)
   const timerRef = useRef(null)
+  const searchRef = useRef(null)
 
   useEffect(() => {
     timerRef.current = setInterval(() => setSeconds(s => s + 1), 1000)
@@ -16,6 +17,16 @@ const Hero = ({ openModal = () => {} }) => {
     return `00:${m}:${s}`
   }
 
+  const handleSearch = useCallback(() => {
+    const value = searchRef.current?.value?.trim()
+    if (!value) {
+      searchRef.current?.focus()
+      return
+    }
+    console.log(`Qidirilmoqda: ${value}`)
+    document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
     <section className="hero">
       <div className="hero-left">
@@ -23,17 +34,17 @@ const Hero = ({ openModal = () => {} }) => {
         <h1>Usta emas —<br/><em>Maslahat</em><br/>chaqiring</h1>
         <p className="hero-sub">Jo'mrak buzildimi? Kompyuter ishlamayaptimi?<br/>Usta uyingizga kelishini kutmang — 10 daqiqa video-qo'ng'iroqda muammoni hal qiling.</p>
         <div className="search-wrap">
-          <input className="search-input" type="text" placeholder="Qanday muammo bor? (santexnik, elektrik...)" />
-          <button className="search-btn">Topish →</button>
+          <input ref={searchRef} className="search-input" type="text" placeholder="Qanday muammo bor? (santexnik, elektrik...)" aria-label="Muammo turini qidiring" onKeyDown={(e) => e.key === 'Enter' && handleSearch()} />
+          <button className="search-btn" onClick={handleSearch} role="button">Topish →</button>
         </div>
         <div className="hero-btns">
-          <button className="btn-primary" onClick={openModal}>Hozir maslahat olish</button>
-          <button className="btn-secondary" onClick={() => document.getElementById('how')?.scrollIntoView({behavior:'smooth'})}>Qanday ishlaydi?</button>
+          <button className="btn-primary" onClick={openModal} role="button">Hozir maslahat olish</button>
+          <button className="btn-secondary" onClick={() => document.getElementById('how')?.scrollIntoView({behavior:'smooth'})} role="button">Qanday ishlaydi?</button>
         </div>
         <div className="hero-stats">
-          <div className="stat-item"><div className="stat-num">320+</div><div className="stat-label">Malakali usta</div></div>
-          <div className="stat-item"><div className="stat-num">4.9★</div><div className="stat-label">O'rtacha reyting</div></div>
-          <div className="stat-item"><div className="stat-num">5 min</div><div className="stat-label">O'rtacha javob vaqti</div></div>
+          <div className="stat-item"><div className="stat-num" aria-live="polite">320+</div><div className="stat-label">Malakali usta</div></div>
+          <div className="stat-item"><div className="stat-num" aria-live="polite">4.9★</div><div className="stat-label">O'rtacha reyting</div></div>
+          <div className="stat-item"><div className="stat-num" aria-live="polite">5 min</div><div className="stat-label">O'rtacha javob vaqti</div></div>
         </div>
       </div>
 

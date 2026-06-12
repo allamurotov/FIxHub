@@ -18,7 +18,7 @@ const Navbar = ({ openModal = () => {}, darkMode = false, toggleDark = () => {} 
           </button>
         </li>
         <li>
-          <button className="theme-toggle" onClick={toggleDark} aria-label="Toggle theme">
+          <button className="theme-toggle" onClick={toggleDark} aria-label="Tungi rejim">
             {darkMode ? '☀️' : '🌙'}
           </button>
         </li>
@@ -27,7 +27,7 @@ const Navbar = ({ openModal = () => {}, darkMode = false, toggleDark = () => {} 
       <button
         className={`hamburger${menuOpen ? ' active' : ''}`}
         onClick={() => setMenuOpen(o => !o)}
-        aria-label="Menu"
+        aria-label="Menyuni ochish"
       >
         <span /><span /><span />
       </button>

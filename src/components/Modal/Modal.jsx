@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import './Modal.css'
 
-const Modal = ({ isOpen = false, onClose = () => {} }) => {
+const Modal = ({ isOpen = false, onClose = () => {}, onSuccess = () => {} }) => {
   const overlayRef = useRef(null)
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Modal = ({ isOpen = false, onClose = () => {} }) => {
             <option>Usta — maslahat bermoqchiman</option>
           </select>
         </div>
-        <button className="modal-submit" onClick={() => { onClose(); alert("✅ Tabriklaymiz! Tez orada siz bilan bog'lanamiz.") }}>Davom etish →</button>
+        <button className="modal-submit" onClick={() => { onClose(); onSuccess(); }}>Davom etish →</button>
       </div>
     </div>
   )

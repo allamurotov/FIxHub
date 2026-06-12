@@ -10,7 +10,7 @@ import Footer from '../components/Footer/Footer'
 import Modal from '../components/Modal/Modal'
 import useScrollReveal from '../hooks/useScrollReveal'
 
-const Home = ({ isModalOpen: initialOpen = false, setIsModalOpen: parentSetModal, darkMode = false, toggleDark = () => {} }) => {
+const Home = ({ isModalOpen: initialOpen = false, setIsModalOpen: parentSetModal, darkMode = false, toggleDark = () => {}, onRegisterSuccess = () => {} }) => {
   const [isModalOpen, setIsModalOpen] = useState(initialOpen)
   // If parent passed setter keep it in sync
   React.useEffect(() => {
@@ -30,7 +30,7 @@ const Home = ({ isModalOpen: initialOpen = false, setIsModalOpen: parentSetModal
       <Compare />
       <CTA openModal={() => setIsModalOpen(true)} />
       <Footer />
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSuccess={onRegisterSuccess} />
     </div>
   )
 }

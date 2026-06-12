@@ -1,32 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { categoriesData } from '../../data'
 import './Categories.css'
 
-const categoriesData = [
-  { emoji: '🔧', name: 'Santexnik', count: '48 usta' },
-  { emoji: '⚡', name: 'Elektrik', count: '62 usta' },
-  { emoji: '💻', name: 'Kompyuter', count: '95 usta' },
-  { emoji: '📱', name: 'Telefon', count: '74 usta' },
-  { emoji: '❄️', name: 'Konditsioner', count: '31 usta' },
-  { emoji: '🚿', name: 'Gaz isitgich', count: '27 usta' },
-  { emoji: '🔌', name: 'Maishiy texnika', count: '56 usta' },
-  { emoji: '🏗️', name: "Ta'mirlash", count: '43 usta' },
-  { emoji: '🔐', name: 'Qulf & eshik', count: '19 usta' },
-  { emoji: '🎨', name: "Bo'yoq & suvoq", count: '38 usta' },
-]
+const SkeletonCard = () => (
+  <div className="cat-card skeleton-card">
+    <div className="skeleton skeleton-circle" />
+    <div className="skeleton skeleton-text skeleton-text-short" />
+    <div className="skeleton skeleton-text skeleton-text-very-short" />
+  </div>
+)
 
 const Categories = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  const renderCards = () => {
+    if (isLoading) {
+      return Array.from({ length: 10 }).map((_, i) => <SkeletonCard key={i} />)
+    }
+    return categoriesData.map((c, idx) => (
+      <div className="cat-card" key={idx}>
+        <span className="cat-emoji">{c.emoji}</span>
+        <div className="cat-name">{c.name}</div>
+        <div className="cat-count">{c.count}</div>
+      </div>
+    ))
+  }
+
   return (
     <section className="categories" id="categories">
       <div className="section-label">Xizmat turlari</div>
       <div className="section-title" style={{maxWidth:500}}>Har qanday uy muammosi uchun mutaxassis</div>
       <div className="cat-grid">
-        {categoriesData.map((c, idx) => (
-          <div className="cat-card" key={idx}>
-            <span className="cat-emoji">{c.emoji}</span>
-            <div className="cat-name">{c.name}</div>
-            <div className="cat-count">{c.count}</div>
-          </div>
-        ))}
+        {renderCards()}
       </div>
     </section>
   )

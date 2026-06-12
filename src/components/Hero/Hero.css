@@ -47,5 +47,7 @@ h1 em { font-style: normal; color: var(--accent); }
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
-  .hero-visual { display: none; }
+  .hero-visual { display: block; }
+  .video-card { aspect-ratio: auto; height: 200px; }
+  .floating-chip { display: none; }
 }
