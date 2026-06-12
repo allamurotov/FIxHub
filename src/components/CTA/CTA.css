@@ -1,5 +1,5 @@
-.cta-section { padding: 100px 48px; background: var(--cta-bg); text-align: center; position: relative; overflow: hidden; }
-.cta-section::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(232,93,47,0.15) 0%, transparent 70%); pointer-events: none; }
+.cta-section { padding: 100px 48px; background: var(--cta-bg); text-align: center; position: relative; overflow: hidden; transition: background var(--transition-medium); }
+.cta-section::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(232,93,47,0.08) 0%, transparent 70%); pointer-events: none; }
 .cta-title { font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 4vw, 52px); font-weight: 800; color: var(--cta-title); letter-spacing: -2px; line-height: 1.1; }
 .cta-sub { color: var(--cta-sub); font-size: 16px; margin-top: 20px; }
 .cta-btns { margin-top: 36px; display: flex; gap: 14px; justify-content: center; }

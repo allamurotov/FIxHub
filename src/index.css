@@ -44,6 +44,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
+  transition: background var(--transition-medium), color var(--transition-medium);
 }
 
 /* Dark theme variables when class 'dark' is applied to html */

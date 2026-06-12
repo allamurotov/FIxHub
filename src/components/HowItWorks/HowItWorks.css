@@ -2,7 +2,7 @@
 .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
 .section-title { font-family: 'Unbounded', sans-serif; font-size: clamp(26px, 3vw, 42px); font-weight: 800; letter-spacing: -1.2px; max-width: 600px; line-height: 1.25; word-spacing: 6px; }
 .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 56px; background: transparent; border: none; padding: 8px; }
-.step-card { background: var(--card-bg); padding: 36px 28px; position: relative; transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease; border-radius: var(--radius-lg); box-shadow: var(--card-shadow); }
+.step-card { background: var(--card-bg); padding: 36px 28px; position: relative; transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease, background var(--transition-medium); border-radius: var(--radius-lg); box-shadow: var(--card-shadow); }
 .step-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(15,15,15,0.08); }
 .step-card:hover .step-num { color: var(--accent); }
 .step-card:hover .step-desc { color: var(--accent); }

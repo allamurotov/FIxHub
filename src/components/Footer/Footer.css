@@ -1,4 +1,4 @@
-footer { background: var(--footer-bg); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid transparent; }
+footer { background: var(--footer-bg); padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid transparent; transition: background var(--transition-medium), border-color var(--transition-medium); }
 html.dark footer { border-top-color: var(--border); }
 footer .logo { color: var(--footer-text); font-size: 18px; font-family: 'Unbounded', sans-serif; font-weight: 800; }
 footer .logo span { color: var(--accent); }

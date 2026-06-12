@@ -2,10 +2,10 @@
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 18px 48px;
-  background: rgba(245,240,232,0.92);
+  background: var(--paper);
   backdrop-filter: blur(12px);
   border-bottom: 1.5px solid var(--border);
-  transition: background var(--transition-medium);
+  transition: background var(--transition-medium), border-color var(--transition-medium);
 }
 html.dark .nav {
   background: rgba(7,7,7,0.92);

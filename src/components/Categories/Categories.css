@@ -1,8 +1,8 @@
-.categories { padding: 80px 48px; background: var(--categories-bg); }
+.categories { padding: 80px 48px; background: var(--categories-bg); transition: background var(--transition-medium); }
 .categories .section-label { color: var(--gold); }
 .categories .section-title { color: var(--categories-title); }
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; margin-top: 48px; }
-.cat-card { background: var(--cat-card-bg); border: 1px solid var(--cat-card-border); border-radius: var(--radius-lg); padding: 24px 20px; text-align: center; cursor: pointer; transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast); box-shadow: var(--card-shadow); }
+.cat-card { background: var(--cat-card-bg); border: 1px solid var(--cat-card-border); border-radius: var(--radius-lg); padding: 24px 20px; text-align: center; cursor: pointer; transition: background var(--transition-medium), transform var(--transition-fast), border-color var(--transition-medium); box-shadow: var(--card-shadow); }
 .cat-card:hover { background: rgba(232,93,47,0.12); border-color: rgba(232,93,47,0.28); transform: translateY(-6px); }
 .cat-emoji { font-size: 36px; display: block; margin-bottom: 12px; }
 .cat-name { font-size: 13px; font-weight: 600; color: var(--categories-title); }
