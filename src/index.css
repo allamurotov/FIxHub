@@ -20,19 +20,19 @@
   --footer-text: rgba(255,255,255,0.85);
   --footer-link: rgba(255,255,255,0.7);
   --footer-copy: rgba(255,255,255,0.6);
-  --categories-title: #ffffff;
-  --categories-count: rgba(255,255,255,0.65);
-  --cat-card-bg: rgba(255,255,255,0.04);
-  --cat-card-border: rgba(255,255,255,0.06);
-  --cta-bg: var(--surface-dark);
-  --cta-title: var(--on-dark);
-  --cta-sub: rgba(255,255,255,0.55);
-  --cta-btn-border: rgba(255,255,255,0.3);
+  --categories-title: var(--ink);
+  --categories-count: var(--muted);
+  --cat-card-bg: var(--card-bg);
+  --cat-card-border: var(--border);
+  --cta-bg: var(--paper);
+  --cta-title: var(--ink);
+  --cta-sub: var(--muted);
+  --cta-btn-border: var(--border);
   --on-accent: #ffffff;
   --on-dark: #ffffff;
   --on-card-text: var(--ink);
   --chip-bg: #ffffff;
-  --categories-bg: var(--surface-dark);
+  --categories-bg: var(--paper);
   --step-num-color: rgba(13,13,13,0.12);
   --tag-bg: rgba(13,13,13,0.06);
 }
